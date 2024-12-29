@@ -1,55 +1,64 @@
-.cTitle{
-    color:whitesmoke; 
-    font-size: 30px;
-    margin: 0px;
-    font-weight: 150;
-    margin-top: 40px;
-  }
+@font-face {
+  font-family: 'Montserrat'; 
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
 
-  .contactDiv{
-    display: flex;
-    width: fit-content;
-    margin: 40px 100px 10px 120px;
-  }
+.cTitle {
+  color: whitesmoke; 
+  font-size: 30px;
+  margin: 0px;
+  font-weight: 150;
+  margin-top: 40px;
+}
 
-  .contact{
-    height: fit-content;
-  }
+.contactDiv {
+  display: flex;
+  width: fit-content;
+  margin: 40px 100px 10px 120px;
+}
 
-  .footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.contact {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100%; 
+}
 
-  .footerName{
-    font-family: Montseratt;
-    font-weight: 200;
-    color: aliceblue;
-  }
-  
-  .contactLinksBox{
-    display: flex;
-    justify-content: left;
-    align-items: left;
-  }
+.contact .cTitle {
+  align-self: flex-start; 
+}
 
-  .contactLinksBox {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    gap: 10px;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerName {
+  margin-top: 40px;
+  font-family: Montserrat;
+  font-weight: 200;
+  color: aliceblue;
+  opacity: 50%;
+}
+
+.contactLinksBox {
+  display: flex;
+  flex-direction: column;
+  align-items:first baseline;
+  gap: 10px;
 }
 
 .contactLinks {
-    font-size: 18px;
-    font-weight: 500;
-    color: aliceblue;
+  font-size: 18px;
+  font-weight: 500;
+  color: aliceblue;
 }
 
-.email{
+.email {
   color: aliceblue;
-  font-family: Montseratt;
+  font-family: Montserrat;
   font-weight: 200;
   margin-left: 10px;
   transition: all 0.3s ease;
@@ -65,7 +74,7 @@ a {
   text-shadow: 0 0 10px rgba(255, 255, 255); 
 }
 
-.contactLogos{
+.contactLogos {
   width: 30px;
 }
 
@@ -78,4 +87,69 @@ a {
 .contact.visible {
   opacity: 1; 
   transform: translateY(0); 
+}
+
+@media (max-width: 768px) {
+  .cTitle {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .contactDiv {
+    margin: 20px 40px 10px 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactLinksBox {
+    gap: 15px;
+    align-items: center;
+  }
+
+  .contactLinks {
+    font-size: 16px;
+  }
+
+  .email {
+    font-size: 14px;
+  }
+
+  .contactLogos {
+    width: 25px;
+  }
+
+  .footerName{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cTitle {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+
+  .contactDiv {
+    margin: 15px 20px 10px 20px;
+  }
+
+  .contactLinksBox {
+    gap: 10px;
+  }
+
+  .contactLinks {
+    font-size: 14px;
+  }
+
+  .email {
+    font-size: 12px;
+  }
+
+  .contactLogos {
+    width: 20px;
+  }
+
+  .footerName{
+    font-size: 8px;
+  }
 }
