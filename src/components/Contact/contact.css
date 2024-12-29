@@ -1,0 +1,81 @@
+.cTitle{
+    color:whitesmoke; 
+    font-size: 30px;
+    margin: 0px;
+    font-weight: 150;
+    margin-top: 40px;
+  }
+
+  .contactDiv{
+    display: flex;
+    width: fit-content;
+    margin: 40px 100px 10px 120px;
+  }
+
+  .contact{
+    height: fit-content;
+  }
+
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footerName{
+    font-family: Montseratt;
+    font-weight: 200;
+    color: aliceblue;
+  }
+  
+  .contactLinksBox{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .contactLinksBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 10px;
+}
+
+.contactLinks {
+    font-size: 18px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.email{
+  color: aliceblue;
+  font-family: Montseratt;
+  font-weight: 200;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+.email:hover {
+  border-color: #c2c2c2; 
+  border-width: 0px; 
+  text-shadow: 0 0 10px rgba(255, 255, 255); 
+}
+
+.contactLogos{
+  width: 30px;
+}
+
+.contact {
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 1.5s ease, transform 1.5s ease; 
+}
+
+.contact.visible {
+  opacity: 1; 
+  transform: translateY(0); 
+}
