@@ -111,3 +111,61 @@
 .project-card:nth-child(4) {
   transition-delay: 0.6s;
 }
+
+@media (max-width: 768px) {
+  .projects-container {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .project-card {
+    width: 200px;
+    height: 280px;
+  }
+
+  .project-overlay h3 {
+    font-size: 1.2em;
+  }
+
+  .project-overlay p {
+    font-size: 0.9em;
+  }
+
+  .pTitle {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .projectsDiv {
+    margin: 20px 0px 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .project-card {
+    width: 160px;
+    height: 230px;
+  }
+
+  .project-overlay h3 {
+    font-size: 1.1em;
+  }
+
+  .project-overlay p {
+    font-size: 0.8em;
+  }
+
+  .pTitle {
+    font-size: 24px;
+    margin-top: 15px;
+  }
+
+  .projectsDiv {
+    margin: 10px 0px 10px 10px;
+  }
+}
