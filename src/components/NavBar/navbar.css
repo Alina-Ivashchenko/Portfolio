@@ -1,0 +1,78 @@
+@keyframes neon-glow {
+    from {
+      text-shadow: 
+        1 0 10px white;
+    }
+    to {
+      text-shadow: 
+        0 0 10px white;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    color: whitesmoke; 
+    border: 1px solid transparent;
+    padding: 15px 35px;
+    font-size: 1.4em;
+    font-weight: 150;
+    font-family: inherit;
+    background-color: rgb(37, 37, 37);
+    cursor: pointer;
+    transition: 
+        border-color 0.5s,
+        transform 0.5s,
+        font-size 0.5s;
+    width: fit-content;
+    margin: 20px;
+}
+
+.btn:hover {
+    border-color: #c2c2c2;
+    transform: scale(1.1);
+    animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    animation: fadeIn ease-in-out 0.5s;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;  
+        align-items: center; 
+        gap: 10px;  
+    }
+
+    .btn {
+        font-size: 1.2em; 
+        padding: 12px 25px; 
+        margin: 10px;  
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;  
+        align-items: center;  
+        gap: 8px;  
+    }
+
+    .btn {
+        font-size: 1.1em;  
+        padding: 10px 20px; 
+        margin: 8px;  
+    }
+}
