@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./contact.css";
 import Email from "../../assets/gmail.png";
-import LinkedIn from "../../assets/LinkedIn.png";
+import LinkedIn from "../../assets/linkedin.png";
 import Handshake from "../../assets/Handshake.jpg";
 
 const Contact = () => {
