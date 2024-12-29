@@ -1,19 +1,33 @@
 @keyframes neon-glow {
     from {
-      text-shadow: 
-        1 0 10px white;
+        text-shadow: 
+            1px 0 10px white;
     }
     to {
-      text-shadow: 
-        0 0 10px white;
+        text-shadow: 
+            0 0 10px white;
     }
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
-  }
+}
 
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
 
 .btn {
     display: flex;
@@ -46,33 +60,205 @@
     justify-content: center;
     width: 100%;
     animation: fadeIn ease-in-out 0.5s;
+    padding: 0; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.navbar .btn {
+    margin: 10px;
 }
 
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;  
-        align-items: center; 
-        gap: 10px;  
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
     }
 
     .btn {
-        font-size: 1.2em; 
-        padding: 12px 25px; 
-        margin: 10px;  
+        font-size: 1.3em;
+        padding: 12px 25px;
+        margin: 15px;
     }
 }
 
-
 @media (max-width: 480px) {
     .navbar {
-        flex-direction: column;  
-        align-items: center;  
-        gap: 8px;  
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
     }
 
     .btn {
-        font-size: 1.1em;  
-        padding: 10px 20px; 
-        margin: 8px;  
+        font-size: 1.2em;
+        padding: 10px 20px;
+        margin: 12px;
+    }
+}
+
+.about {
+    display: flex;
+    background-color: rgb(37, 37, 37);
+    padding: 20px;
+    width: 100%;
+    justify-content: center; 
+}
+
+.info {
+    text-align: left;
+    width: 100%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.title {
+    color: whitesmoke; 
+    font-size: 30px;
+    margin: 0px;
+    font-weight: 150;
+}
+
+h1 {
+    color: whitesmoke; 
+    font-size: 60px;
+    font-family: Montserrat;
+    margin: 10px 25px 20px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    display: inline-block;
+    animation: typewriter 5s steps(40, end) 1s 1 normal both, blink 0.7s step-end infinite;
+}
+
+.about-info {
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Montserrat;
+    margin-bottom: 5px;
+}
+
+.major {
+    color: whitesmoke;
+    font-family: Montserrat;
+    font-weight: 100;
+    margin: 0px;
+}
+
+.logosForAbout {
+    margin-right: 10px;
+    margin-top: 15px;
+    width: 40px;
+    display: inline;
+    border-radius: 25%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logosForAbout:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); 
+}
+
+.about_section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.about_section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.typewriter-container {
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+}
+
+@keyframes typewriter {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+    100% { border-color: white; }
+}
+
+@media (max-width: 768px) {
+    .about_content {
+        flex-direction: column;
+    }
+
+    .image-container {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 45px; 
+    }
+
+    .about-info, .major {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 35px; 
+    }
+
+    .about-info, .major {
+        font-size: 12px;
+    }
+
+    .logosForAbout {
+        width: 30px;
+    }
+
+    .about-image {
+        max-width: 70%;
     }
 }
