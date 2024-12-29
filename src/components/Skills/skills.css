@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Montseratt'; 
-    src: url("../../fonts/Montserrat-VariableFont_wght.ttf")
-  }
- 
-.titleSkills{
-    color:whitesmoke; 
+    font-family: 'Montserrat'; 
+    src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+.titleSkills {
+    color: whitesmoke; 
     font-size: 30px;
     margin: 0px;
     font-weight: 150;
@@ -16,47 +16,52 @@
     align-items: center;
     justify-self: center;
     margin: 0px;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
-.info_block{
+.info_block {
     display: block;
     text-align: left;
     margin: 5px 20px 25px 50px;
     animation: fadeIn 2s ease-in-out;
+    flex: 1 1 200px; 
 }
 
-.skillnames{
-    font-family: Montseratt;
+.skillnames {
+    font-family: Montserrat;
     font-size: 20px;
     font-weight: 100;
     color: aliceblue;
 }
 
-.logosForSkills{
+.logosForSkills {
     width: 80px;
     transition: transform 0.3s ease;
 }
 
-.logosForSkills:hover{
+.logosForSkills:hover {
     transform: scale(1.1);
 }
 
 .logosBlock {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     width: 100%;
     gap: 50px; 
-    margin: 10px 0 35px 0; 
+    margin: 10px 0 35px 0;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
-.info_section{
+.info_section {
     display: block;
     align-items: center;
     justify-content: center;
 }
 
-.skillsTitle{
+.skillsTitle {
     display: flex;
     width: fit-content;
     margin: 40px 0px 10px 120px;
@@ -66,7 +71,7 @@
     text-align: center;
     margin-top: 20px;
     font-size: 1.2rem;
-    color: #696969; 
+    color: #696969;
     font-style: italic;
     font-weight: 200;
 }
@@ -108,28 +113,59 @@
 .fade-section:nth-child(2) { transition-delay: 0.2s; }
 .fade-section:nth-child(3) { transition-delay: 0.4s; }
 
-@media (max-width: 480px) {
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
     .titleSkills {
-        font-size: 24px; /* Smaller title size */
+        font-size: 26px; 
     }
 
     .skillnames {
-        font-size: 16px; /* Smaller skill names font */
+        font-size: 18px; 
     }
 
     .logosForSkills {
-        width: 50px; /* Further reduce logo size */
+        width: 60px; 
     }
 
     .logosBlock {
-        gap: 10px; /* Reduce gap for very small screens */
+        gap: 20px; 
     }
 
     .skillsTitle {
-        font-size: 26px; /* Slightly smaller title font */
+        margin: 30px 0px 10px 50px; 
+        font-size: 28px; 
     }
 
     .info_block {
-        margin: 10px; /* More compact spacing */
+        margin: 10px 10px 20px 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .titleSkills {
+        font-size: 24px; 
+    }
+
+    .skillnames {
+        font-size: 16px; 
+    }
+
+    .logosForSkills {
+        width: 50px; 
+    }
+
+    .logosBlock {
+        gap: 10px; 
+    }
+
+    .skillsTitle {
+        font-size: 26px; 
+        margin: 30px 10px 10px 10px; 
+    }
+
+    .info_block {
+        margin: 10px; 
+        text-align: center; 
     }
 }
